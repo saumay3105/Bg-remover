@@ -3,7 +3,6 @@
   <head>
     <title>RemoveIT</title>
     <style>
-     
       body {
         height: 100vh;
         display: flex;
@@ -15,7 +14,10 @@
         background-color: #f5f7fa;
         color: #333;
       }
-
+      .main{
+        display: flex;
+        flex-direction: column;
+      }
       /* Drop zone styling */
       .drop-zone {
         border: 2px dashed #888;
@@ -70,17 +72,20 @@
     </style>
   </head>
   <body>
-    <div id="dropZone" class="drop-zone">
-      <h1>Remove Background</h1>
-      <form
-        id="uploadForm"
-        action="/"
-        method="post"
-        enctype="multipart/form-data"
-      >
-        <input id="fileInput" type="file" name="file" />
-        <input type="submit" value="Remove Background" />
-      </form>
+    <div class="main">
+      <h1>RemoveIT</h1>
+      <div id="dropZone" class="drop-zone">
+        <h1>Upload Image or Drop it here to Remove its background</h1>
+        <form
+          id="uploadForm"
+          action="/"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <input id="fileInput" type="file" name="file" />
+          <input type="submit" value="Select Image" />
+        </form>
+      </div>
     </div>
 
     <script>
